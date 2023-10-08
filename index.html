@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>My CV</title>
+</head>
+<body>
+    <header>
+        <img src="My-image.jpg" alt="Dhanush Prakash V C">
+        <h1>Dhanush Prakash V C</h1>
+    </header>
+    <section class="objective">
+        <h2>Objective</h2>
+        <p>A diligent and well-organized individual seeking a responsible position to apply practical experience and skills while making a meaningful impact on the company's success.</p>
+    </section>
+    <section class="skills">
+        <h2>Skills <button class="toggle-btn">Toggle</button></h2>
+        <ul>
+            <li data-tooltip="As a Bubble developer, I can create dynamic web applications and websites without code, using Bubble's visual development platform. My skills include designing user interfaces, setting up databases, creating workflows, and integrating external APIs to build fully functional and interactive web solutions. Check out my portfolio for examples of my work!">Bubble Developer</li>
+            <li data-tooltip="Figma is a powerful design and prototyping tool that enables collaborative and user-friendly interface design, including wireframing, creating interactive prototypes, and facilitating design handoffs to developers">Figma</li>
+            <li data-tooltip="Retouch Photos, Create Graphics, Adjust Colors, Remove Backgrounds, Text & Typography, Filters & Effects, Image Compositing, Image Restoration, Digital Painting, Web Graphics">
+
+                Photoshop
+            </li>
+            <li data-tooltip="A UI (User Interface) designer creates the visual elements and layout of a digital product, focusing on aesthetics and usability. A UX (User Experience) designer ensures the overall user journey is seamless and enjoyable, improving user satisfaction and product efficiency. Together, they enhance the look and feel of digital interfaces to create engaging and user-friendly experiences">UI and UX Designing</li>
+            <li data-tooltip="A basic Python program can perform a wide range of tasks, helpful in Web scrapping, Automation os repetitive tasks, Building simple desktop applications">
+
+               Python
+        </ul>
+        
+    </section>
+    <section class="projects">
+        <h2>Projects <button class="toggle-btn">Toggle</button></h2>
+        <ul>
+            <li>
+                <h3>ChatGPT - Solutions</h3>
+                <p>Serverless API, Bubble Apps, Power Apps, Power Automate - Chatbot, Image generator by prompt</p>
+            </li>
+            <li>
+                <h3>PHOTOSHOP</h3>
+                <p>Certificates, Posters, Invitations</p>
+            </li>
+            <li>
+                <h3>UNITY ENGINE</h3>
+                <p>2D and 3D Unity Game</p>
+            </li>
+            <li>
+                <h3>Figma</h3>
+                <p>MindFlow (UI and UX Design)</p>
+            </li>
+        </ul>
+    </section>
+    <section class="achievements">
+        <h2>Achievements <button class="toggle-btn">Toggle</button></h2>
+        <ul>
+            <li>
+                <h3>Certification</h3>
+                <p>My Captain - UI & UX Design</p>
+                <p>My Captain - Python</p>
+            </li>
+            <li>
+                <h3>Paper Presentation</h3>
+                <p>Won 2nd prize in Topic of Network Security</p>
+                <p>Impact of AI, AR, and VR and Xenobots</p>
+            </li>
+            <li>
+                <h3>Workshop</h3>
+                <p>Cyber Security</p>
+                <p>Image Processing</p>
+            </li>
+            <li>
+                <h3>Symposium</h3>
+                <p>Mathiesta, XPONDERS-2022, BLlTZKRlEG-2K22</p>
+            </li>
+            <li>
+                <h3>International Conference</h3>
+                <p>ICRTlCPT'2022</p>
+            </li>
+        </ul>
+    </section>
+    <section class="contact">
+        <h2>Contact <button class="toggle-btn">Toggle</button></h2>
+        <ul>
+            <li>
+                <h3>LinkedIn</h3>
+                <a href="https://www.linkedin.com/in/dhanushprakashv-c-a828b7200">www.linkedin.com/in/dhanushprakashv-c-a828b7200</a>
+            </li>
+            <li>
+                <h3>GitHub</h3>
+                <a href="https://github.com/dhanush2006">https://github.com/dhanush2006</a>
+            </li>
+            <li>
+                <h3>Behance</h3>
+                <a href="https://www.behance.net/dhanushprakash3">https://www.behance.net/dhanushprakash3</a>
+            
+            </li>
+            
+        </ul>
+        
+    </section>
+    <button id="scrollToTopBtn" title="Go to top">Top</button>
+    <script>
+        // Get the button element
+        var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+      
+        // Function to scroll to the top of the page smoothly
+        function scrollToTop() {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }
+      
+        // Show the button when the user scrolls down
+        window.addEventListener("scroll", function () {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollToTopBtn.style.display = "block";
+          } else {
+            scrollToTopBtn.style.display = "none";
+          }
+        });
+      
+        // Attach click event listener to the button
+        scrollToTopBtn.addEventListener("click", scrollToTop);
+    </script>
+
+    <script>
+        // Get all toggle buttons for the sections
+        var toggleButtons = document.querySelectorAll(".toggle-btn");
+      
+        // Add click event listeners to toggle buttons
+        toggleButtons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            var section = this.parentNode.nextElementSibling;
+            section.classList.toggle("collapsed");
+          });
+        });
+    </script>
+    <script>
+        // Add tooltips to elements with data-tooltip attribute
+        var tooltipElements = document.querySelectorAll('[data-tooltip]');
+    
+        tooltipElements.forEach(function (element) {
+            var tooltipText = element.getAttribute('data-tooltip');
+    
+            // Create a tooltip element
+            var tooltip = document.createElement('div');
+            tooltip.className = 'tooltip-text';
+            tooltip.textContent = tooltipText;
+    
+            // Append the tooltip to the element
+            element.appendChild(tooltip);
+    
+            // Add a class to the element to style it as a tooltip container
+            element.classList.add('tooltip');
+        });
+    </script>
+    <section class="projects">
+        <h2>Gallery</h2>
+        <div class="image-grid">
+        <div class="image-container">
+            <img src="CV - Generate.png" alt="CV Generator" data-index="1">
+            <img src="Get Answer-2.png" alt="Get Answer" data-index="2">
+            <img src="Chatbot -1.png" alt="Chatbot" data-index="2">
+            <img src="invitation-1.jpg" alt="Invitation" data-index="2">
+            <img src="Brocher.png" alt="Brocher" data-index="2">
+            <img src="Color switch.png" alt="Color Switch" data-index="2">
+            <img src="CUBE ZIGGI - 2.png" alt="Cube Ziggi" data-index="2">
+            <!-- Add more images as needed with unique data-index values -->
+        </div>
+        </div>
+        <div class="lightbox" id="lightbox">
+            <span class="close-button" id="close-button">&times;</span>
+            <img src="" alt="" id="lightbox-image">
+        </div>
+    </section>
+    <script>
+        // Get gallery elements
+        var images = document.querySelectorAll('.image-container img');
+        var lightbox = document.getElementById('lightbox');
+        var lightboxImage = document.getElementById('lightbox-image');
+        var closeButton = document.getElementById('close-button');
+    
+        // Add click event listeners to images for opening lightbox
+        images.forEach(function (image) {
+            image.addEventListener('click', function () {
+                lightbox.style.display = 'block';
+                lightboxImage.src = this.src;
+                document.body.style.overflow = 'hidden'; // Prevent scrolling behind the lightbox
+            });
+        });
+    
+        // Add click event listener to close the lightbox
+        closeButton.addEventListener('click', function () {
+            lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        });
+    
+        // Close the lightbox when clicking outside the image
+        lightbox.addEventListener('click', function (e) {
+            if (e.target === lightbox) {
+                lightbox.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Restore scrolling
+            }
+        });
+    
+        // Keyboard navigation for lightbox
+        document.addEventListener('keydown', function (e) {
+            if (lightbox.style.display === 'block') {
+                if (e.key === 'Escape') {
+                    lightbox.style.display = 'none';
+                    document.body.style.overflow = 'auto'; // Restore scrolling
+                }
+            }
+        });
+    </script>
+        
+    
+</body>
+</html>
